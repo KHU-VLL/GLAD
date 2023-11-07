@@ -1,7 +1,8 @@
 # GLAD: Global-Local View Alignment and Background Debiasing for Video Domain Adaptation [WACV 2024]
+![method](resources/method.jpg)
 
-## Setup
-### Environment
+## Installation
+We provide our working conda environment as an exported yaml file.
 ```bash
 conda env create --file requirements/environment.yml
 pip install -e .
@@ -11,19 +12,22 @@ pip install -e .
 
 ### 1. Download AMASS BMLrub Rendered Videos
 
-The AMASS dataset is a comprehensive motion capture skeleton dataset that serves as an input for the [BABEL](https://babel.is.tue.mpg.de/index.html) dataset. \
-Unlike the original, our proposed dataset, Kinetics→BABEL, utilizes a different kind of input—rendered videos rather than skeletons. \
+The AMASS dataset is a comprehensive motion capture skeleton dataset that serves as an input for the [BABEL](https://babel.is.tue.mpg.de/index.html) dataset.
+Unlike the original, our proposed dataset, Kinetics→BABEL, utilizes a different kind of input—rendered videos rather than skeletons.
 To access these, please create an account on [AMASS](https://amass.is.tue.mpg.de/) and download the BMLrub rendered videos.
 
 
 
 ### 2. Link datasets
-Make sure rawframes are extracted both for kinetics and babel.
+
+Make symlinks to the actual dataset paths.
 ```bash
 mkdir data
 ln -s ./data/k400 /KINETICS/PATH/
 ln -s ./data/babel /BABEL/PATH/
 ```
+We highly recommend to extract rawframes beforehand to optimize I/O.
+Below are example structures for each dataset.
 
 <details><summary>Kinetics Structure</summary>
 
@@ -113,6 +117,11 @@ $(find 'work_dirs/glad' -name '*best*.pth' | head -1) \
 8 \
 --eval 'mean_class_accuracy' 'confusion_matrix'
 ```
+
+## TODOs
+- Model Zoo
+- Kinetics→BABEL license check
+- Pages in the citation
 
 
 ## License
