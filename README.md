@@ -134,8 +134,6 @@ This project is released under the [Apache 2.0 license](LICENSE).
   title={{GLAD}: Global-Local View Alignment and Background Debiasing for Video Domain Adaptation},
   author={Lee, Hyogun and Bae, Kyungho and Ha, Seong Jong and Ko, Yumin and Park, Gyeong-Moon and Choi, Jinwoo},
   booktitle={Proceedings of the IEEE Winter Conference on Applications of Computer Vision (WACV)},
-  pages={tbd},
-  year={2024},
-  organization={IEEE}
+  year={2024}
 }
 ```
