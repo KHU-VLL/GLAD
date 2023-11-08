@@ -93,17 +93,13 @@ The training process has 2 stages.
 
 1. TOL (Temporal Ordering Learning)
     ```bash
-    source tools/dist_train.sh \
-    configs/tol.py \
-    8 \
+    source tools/dist_train.sh configs/tol.py 8 \
     --seed 0
     ```
     Then training result will be generated under `work_dirs/tol/`, which will be utilized in the next stage.
 2. GLAD
     ```bash
-    source tools/dist_train.sh \
-    configs/glad.py \
-    8 \
+    source tools/dist_train.sh configs/glad.py 8 \
     --seed 3 \
     --validate --test-last --test-best
     ```
@@ -111,10 +107,7 @@ The training process has 2 stages.
 ### Test
 
 ```bash
-source tools/dist_test.sh \
-configs/glad.py \
-$(find 'work_dirs/glad' -name '*best*.pth' | head -1) \
-8 \
+source tools/dist_test.sh configs/glad.py $(find 'work_dirs/glad' -name '*best*.pth' | head -1) 8 \
 --eval 'mean_class_accuracy' 'confusion_matrix'
 ```
 
