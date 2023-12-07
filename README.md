@@ -1,4 +1,4 @@
-# GLAD: Global-Local View Alignment and Background Debiasing for Video Domain Adaptation [WACV 2024]
+# GLAD: Global-Local View Alignment and Background Debiasing for Unsupervised Video Domain Adaptation with Large Domain Gap [WACV 2024]
 ![method](resources/method.jpg)
 
 ## Installation
