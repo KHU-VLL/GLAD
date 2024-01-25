@@ -91,7 +91,7 @@ python utils/extract_median_by_rawframes.py \
 ### Train
 The training process has 2 stages.
 
-1. TOL (Temporal Ordering Learning)
+1. Pretrain TOL (Temporal Ordering Learning)
     ```bash
     source tools/dist_train.sh configs/tol.py 8 \
     --seed 0
