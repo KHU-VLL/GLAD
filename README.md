@@ -116,6 +116,9 @@ source tools/dist_test.sh configs/glad.py $(find 'work_dirs/glad' -name '*best*.
 - Kinetics→BABEL license check
 - Pages in the citation
 
+## Special Thanks
+This project has been made possible through the generous funding and support of NCSOFT Corporation. We extend our sincere gratitude for their contribution and belief in our work.
+
 
 ## License
 This project is released under the [BSD-3-Clause](LICENSE).
