@@ -118,7 +118,7 @@ source tools/dist_test.sh configs/glad.py $(find 'work_dirs/glad' -name '*best*.
 
 
 ## License
-This project is released under the [Apache 2.0 license](LICENSE).
+This project is released under the [BSD-3-Clause](LICENSE).
 
 
 ## Citation
