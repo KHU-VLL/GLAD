@@ -1,6 +1,24 @@
 # GLAD: Global-Local View Alignment and Background Debiasing for Unsupervised Video Domain Adaptation with Large Domain Gap [WACV 2024]
 ![method](resources/method.jpg)
 
+## Abstract
+In this work, we tackle the challenging problem of unsupervised video domain adaptation (UVDA) for action recognition.
+We specifically focus on scenarios with **a substantial domain gap**, in contrast to existing works primarily deal
+with small domain gaps between labeled source domains and unlabeled target domains.
+
+So, contributions of this work is 2-fold.
+
+### 1. Introduces Kinetics→BABEL.
+To establish a more realistic setting, we introduce a novel UVDA scenario, denoted as **Kinetics→BABEL**,
+with a more considerable domain gap in terms of both temporal dynamics and background shifts.
+
+### 2. Introduces a method to tackle the challenging Kinetics→BABEL.
+- To tackle the temporal shift, i.e., action duration difference between the source and target domains,
+we propose a global-local view alignment approach.
+- To mitigate the background shift, we propose to learn temporal order sensitive representations by temporal order
+learning and background invariant representations by background augmentation. We empirically validate that the proposed method
+shows significant improvement over the existing methods on the Kinetics→BABEL dataset with a large domain gap.
+
 ## Installation
 We provide our working conda environment as an exported yaml file.
 ```bash
@@ -110,11 +128,6 @@ The training process has 2 stages.
 source tools/dist_test.sh configs/glad.py $(find 'work_dirs/glad' -name '*best*.pth' | head -1) 8 \
 --eval 'mean_class_accuracy' 'confusion_matrix'
 ```
-
-## TODOs
-- Model Zoo
-- Kinetics→BABEL license check
-- Pages in the citation
 
 ## Special Thanks
 This project has been made possible through the generous funding and support of NCSOFT Corporation. We extend our sincere gratitude for their contribution and belief in our work.
