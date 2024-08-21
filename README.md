@@ -1,7 +1,15 @@
 # GLAD: Global-Local View Alignment and Background Debiasing for Unsupervised Video Domain Adaptation with Large Domain Gap [WACV 2024]
 ![method](resources/method.jpg)
 
-## Abstract
+<p>
+    <span>
+        <a href="https://arxiv.org/abs/2311.12467">arXiv</a> | 
+        <a href="https://openaccess.thecvf.com/content/WACV2024/html/Lee_GLAD_Global-Local_View_Alignment_and_Background_Debiasing_for_Unsupervised_Video_WACV_2024_paper">paper</a>
+    </span>
+</p>
+
+
+## What is GLAD?
 In this work, we tackle the challenging problem of unsupervised video domain adaptation (UVDA) for action recognition.
 We specifically focus on scenarios with **a substantial domain gap**, in contrast to existing works primarily deal
 with small domain gaps between labeled source domains and unlabeled target domains.
@@ -28,15 +36,18 @@ pip install -e .
 
 ## Data Preparation
 
-### 1. Download AMASS BMLrub Rendered Videos
+### 1. Download Kinetics→BABEL.
+
+Kinetics→BABEL consists of 4 txt files `babel_test.txt`, `babel_train.txt`, `k400_test.txt`, and `k400_train.txt`.
+The size of these in total is 770 KB. 
+
+### 2. Download AMASS BMLrub Rendered Videos.
 
 The AMASS dataset is a comprehensive motion capture skeleton dataset that serves as an input for the [BABEL](https://babel.is.tue.mpg.de/index.html) dataset.
 Unlike the original, our proposed dataset, Kinetics→BABEL, utilizes a different kind of input—rendered videos rather than skeletons.
-To access these, please create an account on [AMASS](https://amass.is.tue.mpg.de/) and download the BMLrub rendered videos.
+To acquire an access to them, please create an account on [AMASS](https://amass.is.tue.mpg.de/) and download the BMLrub rendered videos.
 
-
-
-### 2. Link datasets
+### 3. Link datasets.
 
 Make symlinks to the actual dataset paths.
 ```bash
@@ -94,7 +105,7 @@ Below are example structures for each dataset.
 ```
 </details>
 
-### 3. Extract Backgrounds for the Background Augmentation
+### 3. Extract Backgrounds for the Background Augmentation.
 ```bash
 python utils/extract_median_by_rawframes.py \
     --ann-file 'data/filelists/k400/filelist_k400_train_closed.txt' \
@@ -138,6 +149,15 @@ This project is released under the [BSD-3-Clause](LICENSE).
 
 
 ## Citation
+
+Thank you for cosidering to cite this work!!!
+It would be so GLAD to help you using the dataset Kinetics→BABEL as well as this code base.
+So, please leave an issue or send an email to us whenever having problems.
+
+Please cite by including this bibtex.
+
+Hope you enjoy your research!
+
 ```bibtex
 @inproceedings{leebae2024glad,
   title={{GLAD}: Global-Local View Alignment and Background Debiasing for Video Domain Adaptation},
