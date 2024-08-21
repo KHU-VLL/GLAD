@@ -39,7 +39,8 @@ pip install -e .
 ### 1. Download Kinetics→BABEL.
 
 Kinetics→BABEL consists of 4 txt files `babel_test.txt`, `babel_train.txt`, `k400_test.txt`, and `k400_train.txt`.
-The size of these in total is 770 KB. 
+The size of these in total is 770 KB.
+The dataset is >>> [Here](https://github.com/KHU-VLL/GLAD/raw/master/kinetics2babel.tar) <<<
 
 ### 2. Download AMASS BMLrub Rendered Videos.
 
