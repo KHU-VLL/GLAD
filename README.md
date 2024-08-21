@@ -152,9 +152,9 @@ This project is released under the [BSD-3-Clause](LICENSE).
 ## Citation
 
 Thank you for cosidering to cite this work!!!
-It would be so GLAD to help you using the dataset Kinetics→BABEL as well as this code base.
-So, please leave an issue or send an email to us whenever having problems.
 
+It would be so GLAD to help you using the dataset Kinetics→BABEL as well as this code base.<br/>
+So, please leave an issue or send an email to us whenever having problems.
 Please cite by including this bibtex.
 
 Hope you enjoy your research!
